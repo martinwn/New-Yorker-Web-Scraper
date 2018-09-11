@@ -13,8 +13,8 @@ $(document).ready(function() {
 
     function initPage () {
 
-        if (window.location.href === "http://localhost:5000/") {
-
+        if (window.location.href === window.location.origin +"/") {
+            
             $.get("/api/headlines?saved=false").then(function(data) {
 
                 articleContainer.empty();
@@ -193,8 +193,6 @@ $(document).ready(function() {
     };
 
     function noteHandler () {
-
-        console.log("this works");
 
         event.preventDefault();
 
