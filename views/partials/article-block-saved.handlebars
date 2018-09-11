@@ -1,0 +1,36 @@
+<div class="article">
+    <div style="background-image: url({{imageLink}}); background-size: cover; background-position: center"></div>
+    <div>
+        <a href="https://www.newyorker.com{{link}}"> <h1>{{title}}</h1> </a>
+        <p>{{summary}}</p>
+    </div>
+    <div>
+        <button class="attach-note" data-id="{{_id}}">Attach Note</button>
+        <button class="remove-save" data-id="{{_id}}">Remove From Saved</button>
+        <button class="show-notes">Show Notes</button>
+    </div>
+    <div class="modal" style="display: none">
+        <form>
+            <input type="text" placeholder="Name" class="name" required autofocus>
+            <textarea placeholder="Leave a Note" cols="30" rows="5" class="message" required></textarea>
+            <button data-id="{{_id}}" class="note-submit">Submit</button>
+        </form>
+    </div>
+    <div class="modal-notes" style="display: none">
+        <h2>Notes</h2>
+        <div>
+            {{#if notes}}
+                {{#each notes}}
+                    <div>
+                        <span>{{name}}: </span><span>"{{message}}"</span>
+                        <button class="delete-note" data-id="{{_id}}">Delete</button>
+                    </div>
+                {{/each}}
+            {{else}}
+                <div>
+                    <h5>There are no saved notes.</h5>
+                </div>
+            {{/if}}
+        </div>
+    </div> 
+</div>   

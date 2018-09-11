@@ -1,0 +1,46 @@
+@media (max-width: 800px)
+    body
+        flex-direction: column
+
+        #sidebar
+           
+            
+            #sidebar-position
+                position: fixed
+                top: 0
+                left: 0
+                right: 0
+                bottom: unset
+                background-color: #eeeead
+                z-index: 3
+                flex-direction: row
+
+                a
+                    margin: 10px 20px
+
+@media (max-width: 680px)
+    body
+
+        #sidebar
+
+            #sidebar-position
+                flex-direction: column
+
+                a
+                    text-align: center
+                    font: 
+                        size: 0.9rem
+
+        section
+
+            .article-container
+
+                .article-header  
+                    margin-left: 0
+                    margin-right: 0
+
+                .article
+                    padding: 5px
+
+                div:last-child
+                    margin-bottom: 40px

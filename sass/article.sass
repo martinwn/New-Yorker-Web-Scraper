@@ -1,0 +1,178 @@
+section
+    flex: 1
+    
+    header
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        min-height: 100vh
+        background-image: url("../images/rawpixel-1046262-unsplash.jpg")
+        background-size: cover
+        background-position: center
+        position: relative
+
+        .overlay
+            position: absolute
+            top: 0
+            bottom: 0
+            right: 0
+            left: 0
+            background-color: rgba(0,0,0,0.3)
+
+        div:nth-child(2)
+            z-index: 1
+
+            a
+                color: rgba(0,0,0,1);
+                font: 
+                    size: 2rem
+                letter-spacing: 0.06em
+                
+                h1
+                    color: #fff
+                    padding: 0
+                    margin: 30px
+
+        div:last-child 
+            z-index: 1 
+
+            p
+                color: #fff
+                font:
+                    size: 1.3rem
+                letter-spacing: 0.05em
+
+    .article-container
+
+        .article-header  
+            text-align: center
+            margin-top: 50px
+            margin-right: 40px
+            margin-left: 40px
+            padding-bottom: 40px
+            border-bottom: solid 0.5px rgba(0,0,0,0.6)
+            letter-spacing: 0.05em
+
+        .article
+            padding: 40px
+            padding-top: 0
+            display: flex
+            flex-direction: column
+            text-align: center
+
+            div:nth-child(2)
+                flex: 1
+                
+                h1
+                    font-size: 1.5em
+                    margin-bottom: 30px
+                    color: black
+                    transition: all ease-in-out 150ms
+                    cursor: pointer
+
+                    &:hover
+                        text-decoration: underline
+
+                p
+                    line-height: 1.7em
+                    font:
+                        family: 'Raleway', sans-serif
+
+            div:last-child, div:nth-child(3)
+
+                button
+                    border: none
+                    margin: 10px 5px
+                    font-size: 1.1rem
+                    color: rgba(0,0,0,0.7)
+                    letter-spacing: 0.05em
+                    background-color: #fff
+                    padding: 0.3em
+                    cursor: pointer
+                    transition: all ease-in-out 100ms
+
+                    &:hover
+                        transform: scale(1.1)
+                        color: rgba(0,0,0,1)
+
+                    &:focus
+                        outline: none
+            .modal
+                
+                form
+                   
+                    input
+                        display: block
+                        margin: 10px auto
+                        padding: 3px
+                        border: solid 1px rgba(0,0,0,0.7)
+                        border-radius: 5px
+
+                        &:focus
+                            outline: none 
+                            border: solid 1px darken(#eeeead, 50%)
+                    
+                    textarea
+                        border: solid 1px rgba(0,0,0,0.7)
+                        border-radius: 5px
+
+                        &:focus
+                            outline: none 
+                            border: solid 1px darken(#eeeead, 50%)
+
+                    .note-submit
+                        display: block
+                        margin: 0 auto
+                        margin-top: 5px
+                        border: solid 1px rgba(0,0,0,0.7)
+                        border-radius: 10px
+                        font-size: 1.1rem
+                        color: rgba(0,0,0,0.7)
+                        letter-spacing: 0.05em
+                        background-color: #fff
+                        padding: 0.3em
+                        cursor: pointer
+                        transition: all ease-in-out 100ms
+
+                        &:hover
+                            transform: scale(1.1)
+                            color: rgba(0,0,0,1)
+
+                        &:focus
+                            outline: none
+            
+            .modal-notes
+
+                span:first-child
+                    font:
+                        size: 1.2rem
+                        weight: 700
+                .delete-note
+                    margin-left: 30px
+                    border: solid 1px rgba(0,0,0,0.7)
+                    border-radius: 5px
+                    
+
+        .alert
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            height: 100vh
+            
+            h3
+                font:
+                    family: 'Raleway', sans-serif
+                    weight: 400
+                margin: 0
+            
+            a
+                display: block
+                color: rgba(0,0,0,0.6)
+                text-align: center
+                transition: all ease-in-out 150ms
+
+                &:hover
+                    transform: scale(1.05)
+                    color: black

@@ -1,0 +1,58 @@
+<div class="modal-loading" style="display: none">
+    <h1>Loading</h1>
+    <div class="spinner"></div>
+</div>
+
+<div class="modal-no-results" style="display: none">
+    <h1>No new results.</h1>
+    <button class="close-no-results">Close</button>
+</div>
+
+<div class="page-overlay" style="display: none"> 
+
+</div>
+
+<div id="sidebar">
+    <div id="sidebar-position">
+        <a href="/">Home</a> 
+        <a href="/saved">Saved Articles</a> 
+        <a class="scrape">Grab New Articles</a>
+        <a class="clear">Clear Articles</a> 
+    </div>
+</div>
+
+<section>
+
+    <header>
+        <div class="overlay"></div>
+        <div>
+            <a href="/"> <h1>Mongo Scraper</h1> </a>
+        </div>
+        <div>
+            <p>New | Yorker | Edition</p>
+        </div>
+    </header>
+
+    <div class="article-container">
+
+        <h1 class="article-header">Articles</h1>
+
+        {{#if dbArticles}}
+            {{#each dbArticles}}
+                {{> article-block-saved }}
+            {{/each}}
+        {{else}}
+            <div class='alert'>
+                <h2>You have no saved articles.</h2>
+                <div>
+                    <h3>What Would You Like To Do?</h3>
+                </div>
+                <div>
+                    <h4><a href='/'>Go Home</a></h4>
+                </div>
+            </div>
+        {{/if}}
+
+    </div>
+
+</section>
