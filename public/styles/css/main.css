@@ -281,7 +281,7 @@ section {
   background-color: rgba(0, 0, 0, 0.2); }
 
 .modal-no-results {
-  z-index: 2;
+  z-index: 4;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -308,7 +308,6 @@ section {
     text-align: center;
     margin: 40px; }
   .modal-no-results .close-no-results {
-    z-index: 4;
     display: block;
     margin: 0 auto;
     margin-top: 5px;
