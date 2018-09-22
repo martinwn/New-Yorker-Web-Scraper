@@ -12,4 +12,5 @@ A web scraper application which makes grabs articles from https://www.newyorker.
 * Handlebars
 * Request
 * Cheerio
+* SASS
 
